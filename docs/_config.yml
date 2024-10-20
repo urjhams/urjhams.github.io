@@ -21,8 +21,7 @@
 title: Quân
 # email: quan.dnl@icloud.com
 description: >- # this means to ignore newlines until "baseurl:"
-I write and archive what I have learned here about Swift, 
-SwiftUI and other aspects of Apple platform develoment as well as Software Engineering.
+I write and archive what I have learned here about Swift, SwiftUI and other aspects of Apple platform develoment as well as Software Engineering.
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://urjhams.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: urjhams
