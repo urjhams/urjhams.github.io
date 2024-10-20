@@ -29,8 +29,9 @@ linkedin_username: quandnl
 
 # Build settings
 theme: minima
-# plugins:
-#   - jekyll-feed
+plugins:
+  - jekyll-feed
+  - jekyll-default-layout
 
 minima:
   skin: auto
