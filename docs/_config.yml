@@ -33,8 +33,11 @@ plugins:
   - jekyll-feed
   - jekyll-default-layout
 
-minima:
-  skin: dark
+# minima:
+#   skin: auto
+
+author:
+  name: "Quân Đinh"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
