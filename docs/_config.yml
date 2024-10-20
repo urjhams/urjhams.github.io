@@ -22,16 +22,22 @@ title: Quân
 email: quan.dnl@icloud.com
 description: >- # this means to ignore newlines until "baseurl:"
   I write about what I have learned about Swift, SwiftUI and other aspects of Apple platform development.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-github_username: urjhams
-linkedin_username: quandnl
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# github_username: urjhams
+# linkedin_username: quandnl
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
 
+minima:
+  skin: auto
+
+  social_links:
+    github: urjhams
+    linkedin: quandnl
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
