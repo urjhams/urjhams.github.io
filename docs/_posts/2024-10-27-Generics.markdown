@@ -1,0 +1,116 @@
+---
+layout: post
+title:  "Generics"
+date:   2024-10-27 22:28:28 +0200
+categories: Swift
+---
+In Swift, Generic is a powerful feature that allow you to write flexible and reuseable function and types that can work with any type rather than with specific types. Since Swift enforces types constraint at compile times, generics reduce the redundancy and make code more type-safe.
+
+### What does Generic solve?
+
+Let say we have the following function:
+
+```swift
+func sum(of firstNumber: Int, and secondNumber: Int) -> Int {
+	firstNumber + secondNumber
+}
+```
+
+The function above is only be able to use with Int type, so when we want to support more numeric types, we need to re-write the functions with those types as below:
+
+```swift
+func sum(of firstNumber: Double, and secondNumber: Double) -> Double {
+	firstNumber + secondNumber
+}
+func sum(of firstNumber: Float, and secondNumber: Float) -> Float {
+	firstNumber + secondNumber
+}
+```
+
+Notice the redundancy in the body of the function above, the only different is the input and output types. This is where Generic plays its role.
+
+```swift
+func sum<T: Numeric>(of firstNumber: T, and secondNumber: T) -> T {
+	firstNumber + secondNumber
+}
+```
+
+Here, `T` is the generic type - a placeholder type that represent any type that conform `Numeric`. So the sum function now accept any numeric type for firstNumber, secondNumber and the return value as long as they are the same type. So now the function could be flexible use with all the cases above:
+
+```swift
+sum(of: 1, and: 2)      // return 3 as Integer
+sum(of: 1.2, and: 3.8)  // return 5.0 as Double
+```
+
+### Generic Classes, Struct and Protocol
+
+In addition to functions, you can also define generic classes, structs, and protocols. This is useful for creating flexible and reusable data structures.
+
+```swift
+class Container<T> {
+    var item: T
+    
+    init(item: T) {
+        self.item = item
+    }
+}
+
+// So you can create an instance of Container with any type:
+let intPackage = Container(item: 5)           // Container<Int>
+let stringPackage = Container(item: "Hello")  // Container<String>
+```
+
+### Type constraint
+
+To ensure the generic types conform to a specific class or protocol, constraints can be added directly after the Generic type in angle brackets or by using the `where` keyword.
+
+```swift
+func someFunction<T: SomeClass, P: SomeProtocol>(someT: T, someP: P) {
+	...
+}
+
+func someOtherFunction<C>(someC: C) where C: SomeOtherClass {
+	...
+}
+```
+
+### Generic types
+
+Swift also allow you to define your own generic types - the data structure that work with any types. A well known sample is `Stack`, a data structure that follow Last-In-First-Out order:
+
+```swift
+struct Stack<Element> {
+    var items = [Element]()
+    
+    mutating func push(_ item: Element) {
+        items.append(item)
+    }
+    
+    mutating func pop() -> Element? {
+        return items.popLast()
+    }
+}
+```
+
+### Associated type
+
+Protocols can use `associatedtype` as a placeholder for a type that isn’t specified until the protocol is adopted. For example, in the Animal protocol below, an associated type `Feed` is required. Any type that conforms to `Animal` must specify the type for `Feed`.
+
+```swift
+protocol Animal {
+	associatedtype Feed
+	func eat(_ feed: Feed)
+}
+
+struct Grass {
+	...
+}
+
+struct Cow: Animal {
+	func eat(_ feed: Grass)
+}
+```
+
+### Conclusion
+
+Generics in Swift provide a way to write reusable, type-safe code that works with multiple data types. By reducing the need for repetitive code, generics improve maintainability and clarity. They are useful when defining collections, data structures, and protocols, giving developers the flexibility to work with a wide range of types.
