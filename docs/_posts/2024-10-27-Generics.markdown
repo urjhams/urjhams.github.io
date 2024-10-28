@@ -6,7 +6,7 @@ categories: Swift
 ---
 In Swift, Generic is a powerful feature that allow you to write flexible and reusable function and types that can work with any type rather than with specific types. Since Swift enforces types constraint at compile times, generics reduce the redundancy and make code more type-safe.
 
-![Image1](/docs/assets/images/generics-1.png)
+![Image1](/docs/assets/generics-1.png)
 
 ### What does Generic solve?
 
