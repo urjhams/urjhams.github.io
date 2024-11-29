@@ -33,9 +33,9 @@ To safely unwrap an optional and work with its value, you can use optional bindi
 
 ```swift
 if let path = imagePaths["Download"] {
-	print("The downloaded image path is:", path)
+ print("The downloaded image path is:", path)
 } else {
-	print("could not find the downloaded image path.")
+ print("could not find the downloaded image path.")
 }
 ```
 
@@ -47,7 +47,7 @@ Optional chaining allows you to access properties or methods on an optional safe
 // access the hasSuffix(_:) method of an optional String
 let hasSuffix = imagePaths["sun"]?.hasSuffix(".png")
 if let hasSuffix, hasSuffix {
-	print("The sun image is a PNG file.")
+ print("The sun image is a PNG file.")
 }
 ```
 

@@ -14,7 +14,7 @@ Let say we have the following function:
 
 ```swift
 func sum(of firstNumber: Int, and secondNumber: Int) -> Int {
-	firstNumber + secondNumber
+    firstNumber + secondNumber
 }
 ```
 
@@ -22,10 +22,10 @@ The function above is only be able to use with Int type, so when we want to supp
 
 ```swift
 func sum(of firstNumber: Double, and secondNumber: Double) -> Double {
-	firstNumber + secondNumber
+    firstNumber + secondNumber
 }
 func sum(of firstNumber: Float, and secondNumber: Float) -> Float {
-	firstNumber + secondNumber
+    firstNumber + secondNumber
 }
 ```
 
@@ -33,7 +33,7 @@ Notice the redundancy in the body of the function above, the only different is t
 
 ```swift
 func sum<T: Numeric>(of firstNumber: T, and secondNumber: T) -> T {
-	firstNumber + secondNumber
+    firstNumber + secondNumber
 }
 ```
 
@@ -68,11 +68,11 @@ To ensure the generic types conform to a specific class or protocol, constraints
 
 ```swift
 func someFunction<T: SomeClass, P: SomeProtocol>(someT: T, someP: P) {
-	...
+    ...
 }
 
 func someOtherFunction<C>(someC: C) where C: SomeOtherClass {
-	...
+    ...
 }
 ```
 
@@ -100,16 +100,16 @@ Protocols can use `associatedtype` as a placeholder for a type that isn’t spec
 
 ```swift
 protocol Animal {
-	associatedtype Feed
-	func eat(_ feed: Feed)
+    associatedtype Feed
+    func eat(_ feed: Feed)
 }
 
 struct Grass {
-	...
+    ...
 }
 
 struct Cow: Animal {
-	func eat(_ feed: Grass)
+    func eat(_ feed: Grass)
 }
 ```
 
