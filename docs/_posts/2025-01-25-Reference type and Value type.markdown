@@ -20,7 +20,7 @@ Efficient data management is essential for creating robust and high-performing s
 
 • **Enumerations (enum):** Define a set of related values.
 
-```Swift
+```swift
 struct Point {
     var x: Int
     var y: Int
@@ -48,7 +48,7 @@ Here, pointA and pointB are separate copies. Changing pointB doesn’t affect po
 
 • **Arrays and Dictionaries:** Often implemented as reference types in many languages.
 
-```Swift
+```swift
 class Person {
     var name: String
     init(name: String) {
