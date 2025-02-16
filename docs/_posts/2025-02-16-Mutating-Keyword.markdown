@@ -11,7 +11,7 @@ By default, value types in Swift (struct, enum, and tuple) are immutable. This m
 
 By marking the method with `mutating`, Swift allows that method to modify the properties of the instance.
 
-```Swift
+```swift
 func address(of pointer: UnsafeRawPointer) -> String {
     .init(format: "%p", Int(bitPattern: pointer))
 }
@@ -44,7 +44,7 @@ withUnsafePointer(to: &foo) {
 
 Additionaly, the instance itself canbe replaced by a completely new instance (but still share the same address)
 
-```Swift
+```swift
 struct Bar {
     var a: Int
 
