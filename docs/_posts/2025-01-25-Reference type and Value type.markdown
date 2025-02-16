@@ -34,7 +34,7 @@ print(pointA.x) // 10
 print(pointB.x) // 30
 ```
 
-Here, pointA and pointB are separate copies. Changing pointB doesn’t affect pointA.
+Here, pointA and pointB are separate copies. Changing pointB doesn't affect pointA.
 
 ## Reference Types
 
@@ -74,7 +74,7 @@ Both personA and personB reference the same Person instance. Modifying through o
 
   • **Fast Access:** Stack memory allows quick allocation and deallocation.
 
-  • **Scope-Limited:** Data exists within the function or block where it’s defined.
+  • **Scope-Limited:** Data exists within the function or block where it's defined.
 
   • **Memory Efficiency:** Minimal overhead due to simple management.
 
@@ -94,15 +94,15 @@ Both personA and personB reference the same Person instance. Modifying through o
 
 ## When to Use
 
-Choosing between value and reference types depends on your application’s needs. Apple’s [Swift guidelines](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes) offer detailed advice, but here are key considerations:
+Choosing between value and reference types depends on your application's needs. Apple's [Swift guidelines](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes) offer detailed advice, but here are key considerations:
 
 ### Use Value Types When
 
-• **Immutability Needed:** Changes to one instance shouldn’t affect others.
+• **Immutability Needed:** Changes to one instance shouldn't affect others.
 
 • **Simple Data Structures:** No need for inheritance or complex behaviors.
 
-• **Performance Critical:** Benefit from stack allocation’s speed.
+• **Performance Critical:** Benefit from stack allocation's speed.
 
 ### Use Reference Types When
 
@@ -139,6 +139,6 @@ class Node {
 
 Distinguishing between value and reference types is vital for effective programming. **Value types** offer simplicity, performance, and safety through immutability, making them ideal for straightforward, independent data. **Reference types** provide flexibility and shared access, essential for complex, interconnected systems.
 
-By thoughtfully selecting the appropriate type based on your application’s requirements, you can enhance performance, maintainability, and reliability. Leveraging the strengths of both value and reference types ensures your code is both efficient and easy to manage.
+By thoughtfully selecting the appropriate type based on your application's requirements, you can enhance performance, maintainability, and reliability. Leveraging the strengths of both value and reference types ensures your code is both efficient and easy to manage.
 
-For more insights, refer to Apple’s [Swift documentation on choosing between structures and classes](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes).
+For more insights, refer to Apple's [Swift documentation on choosing between structures and classes](https://developer.apple.com/documentation/swift/choosing-between-structures-and-classes).
